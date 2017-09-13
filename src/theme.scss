@@ -1,0 +1,98 @@
+@import '~@angular/material/_theming';
+// Plus imports for other components in your app.
+@import './palette';
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$freedom-app-primary:       mat-palette($mat-freedom-primary);
+$freedom-app-primary-lite:  mat-palette($mat-freedom-primary, A100);
+$freedom-app-primary-dark:  mat-palette($mat-freedom-primary, A700);
+
+$freedom-app-secondary:       mat-palette($mat-freedom-secondary);
+$freedom-app-secondary-lite:  mat-palette($mat-freedom-secondary, A100);
+$freedom-app-secondary-dark:  mat-palette($mat-freedom-secondary, A700);
+
+$freedom-app-body:       mat-palette($mat-freedom-body);
+$freedom-app-body-lite:  mat-palette($mat-freedom-body, A100);
+$freedom-app-body-dark:  mat-palette($mat-freedom-body, A700);
+
+$freedom-app-typography: mat-typography-config(
+  $font-family:   '"Freedom Font", sans-serif',
+  $headline:      mat-typography-level(24px, 32px, 500),
+  $title:         mat-typography-level(20px, 32px, 500),
+  $subheading-2:  mat-typography-level(16px, 28px, 500),
+  $subheading-1:  mat-typography-level(16px, 24px, 500),
+  $body-2:        mat-typography-level(14px, 24px, 600),
+  $body-1:        mat-typography-level(14px, 20px, 400),
+  $caption:       mat-typography-level(12px, 20px, 500),
+  $button:        mat-typography-level(14px, 14px, 600)
+);
+
+$font-family: mat-font-family($freedom-app-typography);
+
+@include angular-material-typography($freedom-app-typography);
+
+
+
+// Create the theme object (a Sass map containing all of the palettes).
+$freedom-app-theme: mat-light-theme($freedom-app-primary, $freedom-app-primary-lite, $freedom-app-primary-dark);
+$freedom-app-theme-secondary: mat-light-theme($freedom-app-secondary, $freedom-app-secondary-lite, $freedom-app-secondary-dark);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($freedom-app-theme);
+@include angular-material-theme($freedom-app-theme-secondary);
+
+.primary-freedom {
+  background-color: mat-color($freedom-app-primary);
+  color: #FFFFFF;
+}
+
+.primary-freedom-lite {
+  background-color: mat-color($freedom-app-primary-lite);
+  color: #000000;
+}
+
+.primary-freedom-dark {
+  background-color: mat-color($freedom-app-primary-dark);
+  color: #FFFFFF;
+}
+
+.secondary-freedom {
+  background-color: mat-color($freedom-app-secondary);
+  color: #FFFFFF !important; // placed !important as it is overridden by material2's styling
+}
+
+.secondary-freedom-lite {
+  background-color: mat-color($freedom-app-secondary-lite);
+  color: #000000;
+}
+
+.secondary-freedom-dark {
+  background-color: mat-color($freedom-app-secondary-dark);
+  color: #FFFFFF;
+}
+
+.secondary-freedom-link {
+  color: mat-color($freedom-app-secondary);
+}
+
+.body-freedom {
+  background-color: mat-color($freedom-app-body);
+  color: #000000;
+}
+
+.body-freedom-lite {
+  background-color: mat-color($freedom-app-body-lite);
+  color: #000000;
+}
+
+.body-freedom-dark {
+  background-color: mat-color($freedom-app-body-dark);
+  color: #000000;
+}

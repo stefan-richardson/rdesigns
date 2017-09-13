@@ -1,0 +1,9 @@
+@import './../../../styles';
+
+.top-bar-option {
+  text-align:center;
+  font-weight:normal;
+  margin:10px;
+  @include mat-typography-level-to-styles($freedom-app-typography, subheading-1);
+  background-color: mat-color($freedom-app-secondary);
+}
