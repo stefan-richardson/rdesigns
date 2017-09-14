@@ -12,35 +12,27 @@ import { LandingPageComponent} from './components/landing-page/landing-page.comp
 
 // OTHER IMPORTS
 import {
-  MdSnackBarModule,
-  MdIconModule,
-  MdInputModule,
-  MdToolbarModule,
-  MdCardModule,
-  MdButtonModule,
-  MdDialogModule,
-  MdMenuModule
+  MdSnackBarModule, MdIconModule, MdInputModule, MdToolbarModule,
+  MdCardModule, MdButtonModule, MdDialogModule, MdMenuModule, MdSidenavModule
 } from '@angular/material';
 import 'hammerjs';
+import { TopBarComponent } from './shared/top-bar/top-bar.component';
+import { SideNavComponent } from './shared/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    TopBarComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MdInputModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdIconModule,
-    MdDialogModule,
-    MdButtonModule,
-    MdMenuModule,
-    MdSnackBarModule,
+    MdInputModule, MdToolbarModule, MdCardModule, MdIconModule, MdDialogModule,
+    MdButtonModule, MdMenuModule, MdSnackBarModule, MdSidenavModule,
     AppRoutingModule, // AppRoutingModule should ALWAYS last here to ensure the wild card route '**' is the last.
   ],
   providers: [],
