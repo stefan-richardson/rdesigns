@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { LandingPageComponent} from './components/landing-page/landing-page.component';
 // SERVICES
 
 // OTHER IMPORTS
@@ -22,7 +21,6 @@ import { SideNavComponent } from './shared/side-nav/side-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
     TopBarComponent,
     SideNavComponent
   ],
