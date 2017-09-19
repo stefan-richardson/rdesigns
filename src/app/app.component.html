@@ -4,10 +4,16 @@
     This is the side nav
 
   </md-sidenav>
-
   <!-- primary content -->
-  <button md-button (click)="sidenav.open()">
+  <!-- <button md-button (click)="sidenav.open()">
     <md-icon>add</md-icon>
-  </button>
-  <app-landing-page></app-landing-page>
+  </button> -->
+  <div fxLayout="row">
+    <app-web-design-section id="webDesign" fxFlex="{{webDesignWidth}}" (click)="openSection($event)"></app-web-design-section>
+    <app-graphic-design-section id="graphicDesign" fxFlex="{{graphicDesignWidth}}" (click)="openSection($event)"></app-graphic-design-section>
+    <app-illustration-section id="illustrations" fxFlex="{{illustrationWidth}}" (click)="openSection($event)"></app-illustration-section>
+    <app-about-section id="aboutSection" fxFlex="{{aboutWidth}}" (click)="openSection($event)"></app-about-section>
+    <app-shop-section id="shopSection" fxFlex="{{shopWidth}}" (click)="openSection($event)"></app-shop-section>
+  </div>
+  
 </md-sidenav-container>

@@ -5,9 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 // COMPONENTS
 import { AppComponent } from './app.component';
+import { TopBarComponent } from './shared/top-bar/top-bar.component';
+import { SideNavComponent } from './shared/side-nav/side-nav.component';
+import { WebDesignSectionComponent } from './web-design/web-design-section/web-design-section.component';
+import { GraphicDesignSectionComponent } from './graphic-design/graphic-design-section/graphic-design-section.component';
+import { IllustrationSectionComponent } from './illustrations/illustration-section/illustration-section.component';
+import { AboutSectionComponent } from './about/about-section/about-section.component';
+import { ShopSectionComponent } from './shop/shop-section/shop-section.component';
+
 // SERVICES
+import { SectionToggleService } from './services/section-toggle.service';
 
 // OTHER IMPORTS
 import {
@@ -15,25 +25,30 @@ import {
   MdCardModule, MdButtonModule, MdDialogModule, MdMenuModule, MdSidenavModule
 } from '@angular/material';
 import 'hammerjs';
-import { TopBarComponent } from './shared/top-bar/top-bar.component';
-import { SideNavComponent } from './shared/side-nav/side-nav.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    SideNavComponent
+    SideNavComponent,
+    WebDesignSectionComponent,
+    GraphicDesignSectionComponent,
+    IllustrationSectionComponent,
+    AboutSectionComponent,
+    ShopSectionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MdInputModule, MdToolbarModule, MdCardModule, MdIconModule, MdDialogModule,
     MdButtonModule, MdMenuModule, MdSnackBarModule, MdSidenavModule,
     AppRoutingModule, // AppRoutingModule should ALWAYS last here to ensure the wild card route '**' is the last.
   ],
-  providers: [],
+  providers: [SectionToggleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

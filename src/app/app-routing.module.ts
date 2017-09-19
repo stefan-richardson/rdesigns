@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: AppComponent },
   // { path: '', component: },
   // { path: '**', component: PageNotFoundComponent }
 ];

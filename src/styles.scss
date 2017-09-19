@@ -2,4 +2,9 @@
 // Import theming functions
 @import '~@angular/material/theming';
 // Import your custom theme
-@import 'theme'
+@import 'theme';
+
+* {
+  padding: 0;
+  margin: 0;
+}
