@@ -1,4 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +20,19 @@ export class AppComponent {
   illustrationWidth = 20;
   shopWidth = 20;
   aboutWidth = 20;
+  sectionIsOpen = false;
 
   openSection(e) {
+    console.log(e)
+    if (this.aboutWidth
+      || this.webDesignWidth
+      || this.graphicDesignWidth
+      || this.illustrationWidth
+      || this.shopWidth === 100) {
+        this.sectionIsOpen = true;
+      }
     switch(e.toElement.id) {
-      case 'webDesign':
+      case 'web-design-hero':
           this.webDesignWidth = 100;
           this.graphicDesignWidth = this.illustrationWidth = this.shopWidth = this.aboutWidth = 0;
         break;
@@ -37,5 +53,11 @@ export class AppComponent {
           this.webDesignWidth = this.graphicDesignWidth = this.illustrationWidth = this.shopWidth = 0;
         break;
     }
+
+  }
+
+  closeSection () {
+    this.webDesignWidth = this.graphicDesignWidth = this.illustrationWidth = this.shopWidth = this.aboutWidth = 20;
+    this.sectionIsOpen = false;
   }
 }

@@ -5,15 +5,19 @@
 
   </md-sidenav>
   <!-- primary content -->
-  <!-- <button md-button (click)="sidenav.open()">
-    <md-icon>add</md-icon>
-  </button> -->
+  <button md-button id="menu-btn" (click)="sidenav.open()">
+    <md-icon>menu</md-icon>
+  </button>
+  <button md-button id="close-btn" (click)="closeSection()">
+    <md-icon>close</md-icon>
+  </button>
+
   <div fxLayout="row">
-    <app-web-design-section id="webDesign" fxFlex="{{webDesignWidth}}" (click)="openSection($event)"></app-web-design-section>
-    <app-graphic-design-section id="graphicDesign" fxFlex="{{graphicDesignWidth}}" (click)="openSection($event)"></app-graphic-design-section>
-    <app-illustration-section id="illustrations" fxFlex="{{illustrationWidth}}" (click)="openSection($event)"></app-illustration-section>
-    <app-about-section id="aboutSection" fxFlex="{{aboutWidth}}" (click)="openSection($event)"></app-about-section>
-    <app-shop-section id="shopSection" fxFlex="{{shopWidth}}" (click)="openSection($event)"></app-shop-section>
+    <app-web-design-section class="categories" id="webDesign" fxFlex="{{webDesignWidth}}" (click)="openSection($event)"></app-web-design-section>
+    <app-graphic-design-section class="categories" id="graphicDesign" fxFlex="{{graphicDesignWidth}}" (click)="openSection($event)"></app-graphic-design-section>
+    <app-illustration-section class="categories" id="illustration" fxFlex="{{illustrationWidth}}" (click)="openSection($event)"></app-illustration-section>
+    <app-about-section class="categories" id="aboutSection" fxFlex="{{aboutWidth}}" (click)="openSection($event)"></app-about-section>
+    <app-shop-section class="categories" id="shopSection" fxFlex="{{shopWidth}}" (click)="openSection($event)"></app-shop-section>
   </div>
   
 </md-sidenav-container>

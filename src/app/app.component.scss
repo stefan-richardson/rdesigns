@@ -1,29 +1,52 @@
+$colorOne: #2B89B8;
+$colorTwo: #D1060F;
+$colorThree: #DAD2D8;
+$colorFour: #143642;
+$colorFive: #EC9A29;
+
 md-sidenav {
   width: 200px;
 }
 
 app-web-design-section {
-  width: 20vw;
   height: 100vh;
-  background-color: red;
+  background-color: $colorOne;
+  -webkit-transition: width 2s; /* Safari */
+  transition: width 2s;
 }
 app-graphic-design-section {
-  width: 20vw;
   height: 100vh;
-  background-color: blue;
+  background-color: $colorTwo;
 }
 app-illustration-section {
-  width: 20vw;
   height: 100vh;
-  background-color: green;
+  background-color: $colorThree;
 } 
 app-about-section {
-  width: 20vw;
   height: 100vh;
-  background-color: yellow;
+  background-color: $colorFour;
 }
 app-shop-section {
-  width: 20vw;
   height: 100vh;
-  background-color: orange;
+  background-color: $colorFive;
+}
+
+#close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#menu-btn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.categories {
+  box-shadow: -5px 0 15px #333;
+}
+
+#nav-btns {
+  z-index: 15000;
 }
