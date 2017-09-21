@@ -1,0 +1,20 @@
+#features-container {
+  width: 100vw;
+  height: 400px;
+  padding-top: 20px;
+  background-color: #ddd;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+  }
+}
+.testImg {
+  width: 250px;
+  height: 250px;
+} 
+
+#scroll-bar {
+  overflow-x: hidden;
+}

@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DragScrollModule } from 'angular2-drag-scroll';
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './shared/top-bar/top-bar.component';
 import { SideNavComponent } from './shared/side-nav/side-nav.component';
 import { WebDesignSectionComponent } from './web-design/web-design-section/web-design-section.component';
+import { WebDesignFeaturesComponent } from './web-design/web-design-features/web-design-features.component';
 import { GraphicDesignSectionComponent } from './graphic-design/graphic-design-section/graphic-design-section.component';
 import { IllustrationSectionComponent } from './illustrations/illustration-section/illustration-section.component';
 import { AboutSectionComponent } from './about/about-section/about-section.component';
@@ -36,7 +38,8 @@ import 'hammerjs';
     GraphicDesignSectionComponent,
     IllustrationSectionComponent,
     AboutSectionComponent,
-    ShopSectionComponent
+    ShopSectionComponent,
+    WebDesignFeaturesComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import 'hammerjs';
     HttpModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+    DragScrollModule,
     MdInputModule, MdToolbarModule, MdCardModule, MdIconModule, MdDialogModule,
     MdButtonModule, MdMenuModule, MdSnackBarModule, MdSidenavModule,
     AppRoutingModule, // AppRoutingModule should ALWAYS last here to ensure the wild card route '**' is the last.

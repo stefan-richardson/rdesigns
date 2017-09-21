@@ -1,7 +1,47 @@
-#web-design-hero {
+#web-design-container {
+  width: 100vw;
   height: 100vh;
-  background-image: url('/assets/web-design-bg.jpg');
-  background-size: cover;
-  background-position-x: left;
-  filter: hue-rotate(120deg)
+  overflow-x: hidden;
+
+  #web-design-hero {
+    background-image: url('/assets/img/web-design-bg.jpg');
+    background-size: cover;
+    background-position-x: center;
+    filter: contrast(40%) hue-rotate(90deg) brightness(50%);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+  }
+
+  #web-design-border {
+    position: absolute;
+    top: 3vh;
+    left: 4vw;
+    width: 90vw;
+    height: 90vh;  
+    border: 5px solid #ddd;
+    border-radius: 15px;
+  }
+
+  .title-div {
+    width: 100%;
+    text-align: center;
+    color: #ddd;
+    position: absolute;
+    left: 50%;
+    top: 50vh;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 4em;
+
+    button {
+      position: relative;
+      width: 400px;
+      height: 100px;
+
+      md-icon {
+        font-size: 24px;
+      }
+    }
+  }
 }
