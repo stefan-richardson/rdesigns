@@ -9,8 +9,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DragScrollModule } from 'angular2-drag-scroll';
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './shared/top-bar/top-bar.component';
-import { SideNavComponent } from './shared/side-nav/side-nav.component';
 import { WebDesignSectionComponent } from './web-design/web-design-section/web-design-section.component';
 import { WebDesignFeaturesComponent } from './web-design/web-design-features/web-design-features.component';
 import { GraphicDesignSectionComponent } from './graphic-design/graphic-design-section/graphic-design-section.component';
@@ -27,19 +25,19 @@ import {
   MdCardModule, MdButtonModule, MdDialogModule, MdMenuModule, MdSidenavModule
 } from '@angular/material';
 import 'hammerjs';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent,
-    SideNavComponent,
     WebDesignSectionComponent,
     GraphicDesignSectionComponent,
     IllustrationSectionComponent,
     AboutSectionComponent,
     ShopSectionComponent,
-    WebDesignFeaturesComponent
+    WebDesignFeaturesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

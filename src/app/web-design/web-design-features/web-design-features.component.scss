@@ -1,8 +1,12 @@
+* {
+  overflow: hidden;
+}
 #features-container {
-  width: 100vw;
-  height: 400px;
+  width: 100%;
+  height: auto;
   padding-top: 20px;
   background-color: #ddd;
+  overflow-x: hidden;
 
   h2 {
     width: 100%;
@@ -17,4 +21,42 @@
 
 #scroll-bar {
   overflow-x: hidden;
+}
+
+.example-card {
+  width: 250px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.example-header-image {
+  background-image: url('/assets/img/No-Piggies-Logo.png');
+  background-size: cover;
+}
+
+.example-header-image2 {
+  background-image: url('/assets/img/2.png');
+  background-size: cover;
+}
+
+.example-header-image3 {
+  background-image: url('/assets/img/3.png');
+  background-size: cover;
+}
+
+.example-header-image4 {
+  background-image: url('/assets/img/4.png');
+  background-size: cover;
+}
+.example-header-image7 {
+  background-image: url('/assets/img/7.png');
+  background-size: cover;
+}
+
+.card-container {
+  display: flex; /* or inline-flex */
+  justify-content: space-evenly;
+  justify-content: left;
+  max-width: 1300px;
+  margin: 0 auto;
 }

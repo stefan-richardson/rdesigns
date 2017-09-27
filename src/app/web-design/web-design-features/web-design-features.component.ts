@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DragScroll } from 'angular2-drag-scroll';
+import { MdCard } from '@angular/material';
 
 @Component({
   selector: 'app-web-design-features',
@@ -7,11 +7,14 @@ import { DragScroll } from 'angular2-drag-scroll';
   styleUrls: ['./web-design-features.component.scss']
 })
 export class WebDesignFeaturesComponent implements OnInit {
-  @ViewChild('nav', {read: DragScroll}) ds: DragScroll;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  navigateTo(url) {
+    window.open(url, '_blank');
   }
 
 }
