@@ -2,8 +2,35 @@
   <md-sidenav mode="push" #sidenav>
     <!-- sidenav content -->
     This is the side nav
-
+    <app-web-design-section></app-web-design-section>
   </md-sidenav>
   <!-- primary content -->
-  <app-web-design-section></app-web-design-section>
+    <div class="panels">
+      <div [class.open]="panelIds[0].isOpen" [class.open-active]="panelIds[0].isActive" class="panel panel1" (click)="toggleOpen(0)">
+        <p>Hey</p>
+        <p>Dev</p>
+        <p>Dance</p>
+      </div>
+      <div [class.open]="panelIds[1].isOpen" [class.open-active]="panelIds[1].isActive" class="panel panel2" (click)="toggleOpen(1)">
+        <p>Give</p>
+        <p>Design</p>
+        <p>Receive</p>
+      </div>
+      <div [class.open]="panelIds[2].isOpen" [class.open-active]="panelIds[2].isActive" class="panel panel3" (click)="toggleOpen(2)">
+        <p>Experience</p>
+        <p>Games</p>
+        <p>Today</p>
+      </div>
+      <div [class.open]="panelIds[3].isOpen" [class.open-active]="panelIds[3].isActive" class="panel panel4" (click)="toggleOpen(3)">
+        <p>Give</p>
+        <p>About</p>
+        <p>You can</p>
+      </div>
+      <div [class.open]="panelIds[4].isOpen" [class.open-active]="panelIds[4].isActive" class="panel panel5" (click)="toggleOpen(4)">
+        <p>Life</p>
+        <p>Shop</p>
+        <p>Motion</p>
+      </div>
+    </div>
+  
 </md-sidenav-container>

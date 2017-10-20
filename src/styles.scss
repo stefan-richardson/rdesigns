@@ -4,8 +4,22 @@
 // Import your custom theme
 @import 'theme';
 
-* {
-  padding: 0;
+$colorOne: #2B89B8;
+$colorTwo: #D1060F;
+$colorThree: #DAD2D8;
+$colorFour: #143642;
+$colorFive: #EC9A29;
+
+html {
+  box-sizing: border-box;
+  background:#ffc600;
+  font-family:'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+body {
   margin: 0;
-  overflow-x: hidden;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
