@@ -8,7 +8,7 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cdk@^2.0.0-beta.10":
+"@angular/cdk@^2.0.0-beta.12":
   version "2.0.0-beta.12"
   resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-2.0.0-beta.12.tgz#3a243cb62b93f4e039120ba70f900dc9e235622e"
   dependencies:
@@ -104,6 +104,10 @@
   dependencies:
     tslib "^1.7.1"
 
+"@angular/flex-layout@^2.0.0-beta.9":
+  version "2.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@angular/flex-layout/-/flex-layout-2.0.0-rc.1.tgz#96fa7f85b2c4bacf2784913a2d607e2ed23dc7f1"
+
 "@angular/forms@^4.0.0":
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-4.3.6.tgz#0f20c4597c16a152745d7cd95559855a0a5c6687"
@@ -116,7 +120,7 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/material@^2.0.0-beta.10":
+"@angular/material@^2.0.0-beta.12":
   version "2.0.0-beta.12"
   resolved "https://registry.yarnpkg.com/@angular/material/-/material-2.0.0-beta.12.tgz#71b6d0b7b021891e5d0e3688c1d4bd78c7457f58"
   dependencies:
