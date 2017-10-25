@@ -24,11 +24,11 @@ export class AppComponent {
     {title: 'Shop', message: 'Buy Stuff!', class: 'panel5', isActive: false, isOpen: false}
   ];
 
-  isDev;
-  isDesign;
-  isGames;
-  isAbout;
-  isShop;
+  isDev = false;
+  isDesign = false;
+  isGames = false;
+  isAbout = false;
+  isShop = false;
 
   panelControl(i) {
     this.toggleOpen(i);
@@ -41,9 +41,47 @@ export class AppComponent {
 
   toggleOpen(i) {
     this.panelIds[i].isOpen = !this.panelIds[i].isOpen;
+    for (let j = 0; j < this.panelIds.length; j++) {
+      if(j !== i) {
+        this.panelIds[j].isOpen = false;
+      }
+    }
   }
 
   toggleActive(i) {
     this.panelIds[i].isActive = !this.panelIds[i].isActive;
+    for (let j = 0; j < this.panelIds.length; j++) {
+      if(j !== i) {
+        this.panelIds[j].isActive = false;
+      }
+    }
+  }
+
+  openSection(i) {
+    switch (i) {
+      case 0:
+        this.isDev = true;
+        break;
+      case 1:
+        this.isDesign = true;
+        break;
+      case 2:
+        this.isGames = true;
+        break;
+      case 3:
+        this.isAbout = true;
+        break;
+      case 4:
+        this.isShop = true;
+        break;
+    }
+  }
+
+  sectionOpen() {
+    if (this.isDev || this.isDesign || this.isGames || this.isAbout || this.isShop) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
