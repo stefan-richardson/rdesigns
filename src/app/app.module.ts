@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DragScrollModule } from 'angular2-drag-scroll';
+import { MatButtonModule } from '@angular/material';
 // COMPONENTS
 import { AppComponent } from './app.component';
 
@@ -21,7 +21,7 @@ import 'hammerjs';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    DragScrollModule,
+    MatButtonModule,
     AppRoutingModule, // AppRoutingModule should ALWAYS last here to ensure the wild card route '**' is the last.
   ],
   providers: [],

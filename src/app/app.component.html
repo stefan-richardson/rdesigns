@@ -2,6 +2,6 @@
   <div *ngFor="let panel of panelIds; let i = index" [class.open]="panelIds[i].isOpen" [class.open-active]="panelIds[i].isActive" class="panel {{ panel.class }}" (click)="panelControl(i)">
     <p></p>
     <p>{{ panel.title }}</p>
-    <p><button md-raised-button>{{ panel.message }}</button></p>
+    <p><button mat-button>{{ panel.message }}</button></p>
   </div>
 </div>
