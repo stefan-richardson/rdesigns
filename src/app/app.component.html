@@ -5,8 +5,14 @@
     <p><button mat-button (click)="openSection(i)">{{ panel.message }}</button></p>
   </div>
 </div>
-<div class="container" fxLayoutAlign="center center">
-    
+<div class="nav-container">
+  <mat-toolbar color="accent">
+    <span (click)="openMenu()"><i class="material-icons menu-icon">menu</i>{{navbarTitle}}</span>
+  </mat-toolbar>
 </div>
-
+<app-development class="open-sections" *ngIf="isDev"></app-development>
+<!-- <app-design class="open-sections" *ngIf="isDesign"></app-design> -->
+<!-- <app-games class="open-sections" *ngIf="isGames"></app-games> -->
+<!-- <app-about class="open-sections" *ngIf="isAbout"></app-about> -->
+<!-- <app-shop class="open-sections" *ngIf="isShop"></app-shop> -->
 

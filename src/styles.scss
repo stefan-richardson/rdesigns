@@ -11,14 +11,13 @@ $colorFour: #143642;
 $colorFive: #EC9A29;
 
 html {
-  box-sizing: border-box;
-  font-family:'helvetica neue';
+  font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   font-weight: 200;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #f5f5f6;
 }
 body {
   margin: 0;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
 }

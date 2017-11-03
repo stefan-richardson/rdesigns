@@ -11,6 +11,10 @@ import { DevelopmentComponent } from './development/development.component';
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
   { path: 'development', component: DevelopmentComponent },
+  // { path: 'design', component: DesignComponent },
+  // { path: 'games', component: GamesComponent },
+  // { path: 'about', component: AboutComponent },
+  // { path: 'shop', component: ShopComponent },
   // { path: '', component: },
   // { path: '**', component: PageNotFoundComponent }
 ];

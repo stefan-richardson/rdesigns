@@ -1,3 +1,4 @@
+@import '../styles.scss';
 .panels {
   min-height:100vh;
   overflow: hidden;
@@ -53,7 +54,7 @@
   background-image:url('/assets/img/about_bg.jpg'); 
 }
 .panel5 { 
-  background-image:url('/assets/img/shop_bg.jpg'); 
+  background-image:url('/assets/img/shop_bg2.jpg'); 
 }
 /* Flex Items */
 .panel > * {
@@ -89,5 +90,24 @@
 
 .sections {
   z-index: -1;
+}
+
+.nav-container {
+  width: 100vw;
+
+  mat-toolbar {
+    width: 100vw;
+    display: block;
+  }
+  .menu-icon {
+    color: white;
+    cursor: pointer;
+  }
+}
+.open-sections {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  display: block;
 }
 

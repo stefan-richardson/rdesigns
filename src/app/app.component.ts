@@ -6,8 +6,8 @@ import {
   animate,
   transition
 } from '@angular/animations';
-import {Observable} from 'rxjs/Rx';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
+import { ActivatedRoute, NavigationEnd, Router  } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -25,16 +25,36 @@ export class AppComponent {
     {title: 'Shop', url: 'shop', message: 'Buy Stuff!', class: 'panel5', isActive: false, isOpen: false}
   ];
 
-  isDev = false;
+  isDev = true;
   isDesign = false;
   isGames = false;
   isAbout = false;
   isShop = false;
 
   constructor(private route: ActivatedRoute, private router: Router) {
-    if (router.url !== '') {
-      console.log('Here I am')
-    }
+    router.events.filter(event => event instanceof NavigationEnd)
+    .subscribe((navigation: NavigationEnd) => {
+      switch (navigation.url) {
+        case '/':
+          this.isDev = this.isDesign = this.isGames = this.isAbout = this.isShop = false;
+          break;
+        case '/development':
+          this.isDev = true;
+          break;
+        case '/design':
+          this.isDesign = true;
+          break;
+        case '/games':
+          this.isGames = true;
+          break;
+        case '/about':
+          this.isAbout = true;
+          break;
+        case '/shop':
+          this.isShop = true;
+          break;
+      }
+    });
   }
 
   panelControl(i) {
@@ -91,5 +111,10 @@ export class AppComponent {
     } else {
       return false;
     }
+  }
+
+  openMenu() {
+    this.isDev = this.isDesign = this.isGames = this.isAbout = this.isShop = false;
+    this.router.navigate(['/']);
   }
 }
