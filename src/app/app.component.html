@@ -1,12 +1,12 @@
 <div class="panels" [class.hidden]="sectionOpen()">
   <div *ngFor="let panel of panelIds; let i = index" [class.open]="panelIds[i].isOpen" [class.open-active]="panelIds[i].isActive" class="panel {{ panel.class }}" (click)="panelControl(i)">
     <p></p>
-    <p>{{ panel.title }}</p>
+    <p class="panel-title">{{ panel.title }}</p>
     <p><button mat-button (click)="openSection(i)">{{ panel.message }}</button></p>
   </div>
 </div>
 <div class="container" fxLayoutAlign="center center">
-  <app-development class="sections" *ngIf="isDev"></app-development>
+    
 </div>
 
 

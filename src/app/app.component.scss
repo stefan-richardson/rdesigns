@@ -1,4 +1,3 @@
-
 .panels {
   min-height:100vh;
   overflow: hidden;
@@ -29,6 +28,11 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+
+  .panel-title {
+    position: relative;
+    bottom: 100px;
+  }
   
   button {
     background-color: #fff;
@@ -36,29 +40,27 @@
   }
 }
 .panel1 { 
-  background-image:url(https://pixabay.com/get/eb33b30f29f5093ed1534705fb094793e477e1d519ac104495f8c879a0ecb0b8/code-2620118_1920.jpg); 
+  background-image:url('/assets/img/development_bg.png'); 
 }
 .panel2 { 
-  background-image:url(https://pixabay.com/get/e832b80e2ef31c22d9584518a34d4391e374e2d504b014419df9c17ea6e4b2/colored-pencils-179167_1920.jpg); 
-  color: black;
-  
-
+  background-image:url('/assets/img/design_bg.jpg'); 
+  // color: black;
 }
 .panel3 { 
-  background-image:url(https://pixabay.com/get/ec3cb20c29f71c22d9584518a34d4391e374e2d504b014419df9c17ea5ebb2/children-593313_1920.jpg); 
+  background-image:url('/assets/img/games_bg.jpg'); 
 }
 .panel4 { 
-  background-image:url(https://pixabay.com/get/ef3cb10f20f01c22d9584518a34d4391e374e2d504b014419df9c17ea6ecb7/tie-690084_1920.jpg); 
+  background-image:url('/assets/img/about_bg.jpg'); 
 }
 .panel5 { 
-  background-image:url(https://pixabay.com/get/eb30b70d20f51c22d9584518a34d4391e374e2d504b014419df9c17ea4edb1/money-256281_1920.jpg); 
+  background-image:url('/assets/img/shop_bg.jpg'); 
 }
 /* Flex Items */
 .panel > * {
   margin:0;
   width: 100%;
   transition:transform 0.5s;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   display:flex;
   justify-content: center;
   align-items: center;

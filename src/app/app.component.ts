@@ -7,6 +7,7 @@ import {
   transition
 } from '@angular/animations';
 import {Observable} from 'rxjs/Rx';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,11 +18,11 @@ import {Observable} from 'rxjs/Rx';
 export class AppComponent {
 
   panelIds = [
-    {title: 'Development', message: 'Have a Look!', class: 'panel1', isActive: false, isOpen: false},
-    {title: 'Design', message: 'Come see!', class: 'panel2', isActive: false, isOpen: false},
-    {title: 'Games', message: 'Wanna Play?', class: 'panel3', isActive: false, isOpen: false},
-    {title: 'About', message: 'Check Me Out!', class: 'panel4', isActive: false, isOpen: false},
-    {title: 'Shop', message: 'Buy Stuff!', class: 'panel5', isActive: false, isOpen: false}
+    {title: 'Development', url: 'development', message: 'Have a Look!', class: 'panel1', isActive: false, isOpen: false},
+    {title: 'Design', url: 'design', message: 'Come see!', class: 'panel2', isActive: false, isOpen: false},
+    {title: 'Games', url: 'games', message: 'Wanna Play?', class: 'panel3', isActive: false, isOpen: false},
+    {title: 'About', url: 'about', message: 'Check Me Out!', class: 'panel4', isActive: false, isOpen: false},
+    {title: 'Shop', url: 'shop', message: 'Buy Stuff!', class: 'panel5', isActive: false, isOpen: false}
   ];
 
   isDev = false;
@@ -29,6 +30,12 @@ export class AppComponent {
   isGames = false;
   isAbout = false;
   isShop = false;
+
+  constructor(private route: ActivatedRoute, private router: Router) {
+    if (router.url !== '') {
+      console.log('Here I am')
+    }
+  }
 
   panelControl(i) {
     this.toggleOpen(i);
@@ -75,6 +82,7 @@ export class AppComponent {
         this.isShop = true;
         break;
     }
+    this.router.navigate([this.panelIds[i].url])
   }
 
   sectionOpen() {

@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 
 // OTHER IMPORTS
 import 'hammerjs';
-import { DevelopmentComponent } from './development/development/development.component';
+import { DevelopmentComponent } from './development/development.component';
 
 @NgModule({
   declarations: [
