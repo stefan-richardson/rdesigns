@@ -34,10 +34,13 @@
     position: relative;
     bottom: 100px;
   }
-  
+
   button {
-    background-color: #fff;
-    color: #444;
+    background-color: $secondary;
+    color: #eee;
+    width: 200px;
+    height: 70px;
+
   }
 }
 .panel1 { 
@@ -102,6 +105,8 @@
   .menu-icon {
     color: white;
     cursor: pointer;
+    position: relative;
+    top: 3px;
   }
 }
 .open-sections {
@@ -109,5 +114,16 @@
   height: auto;
   min-height: 500px;
   display: block;
+}
+.nav-title {
+  margin-left: 20px;
+  color: white;
+  text-align: right;
+}
+
+.footer-container {
+  mat-toolbar {
+    margin-top: 100px;
+  }
 }
 

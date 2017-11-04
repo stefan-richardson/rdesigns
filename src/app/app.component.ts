@@ -31,6 +31,8 @@ export class AppComponent {
   isAbout = false;
   isShop = false;
 
+  navbarTitle;
+
   constructor(private route: ActivatedRoute, private router: Router) {
     router.events.filter(event => event instanceof NavigationEnd)
     .subscribe((navigation: NavigationEnd) => {
@@ -40,18 +42,23 @@ export class AppComponent {
           break;
         case '/development':
           this.isDev = true;
+          this.navbarTitle = this.panelIds[0].title;
           break;
         case '/design':
           this.isDesign = true;
+          this.navbarTitle = this.panelIds[1].title;
           break;
         case '/games':
           this.isGames = true;
+          this.navbarTitle = this.panelIds[2].title;
           break;
         case '/about':
           this.isAbout = true;
+          this.navbarTitle = this.panelIds[3].title;
           break;
         case '/shop':
           this.isShop = true;
+          this.navbarTitle = this.panelIds[4].title;
           break;
       }
     });
