@@ -1,0 +1,83 @@
+<div class="hero-container" fxLayoutAlign="center center">
+  <h2 class="hero-title">Web and App Development</h2>
+</div>
+<div class="container">  
+  <h3>Web Development</h3>
+  <div class="category" fxLayoutAlign="center">
+    <mat-card class="dev-projects">
+      <mat-card-header>
+        <mat-card-title>Birkby Food Services</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/birkby_foods.png"> 
+      <mat-card-content>
+          <p class="dev-project-description">
+            This is the first professional website I worked on. It was part of my practicum right out of school and I was responsible for the overall look of the web site. 
+          </p>
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-button (click)="navigateTo('http://www.birkbyfoods.com')">See Project</button>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="dev-projects">
+      <mat-card-header>
+        <mat-card-title>No Piggies Here</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/no_piggies.png"> 
+      <mat-card-content>
+          <p class="dev-project-description">
+            A food blog built from scratch. This was an attempt to mimic the functionality of a Word Press website. I just wanted to see if I could complete this on my own.
+          </p>
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-button (click)="navigateTo('http://www.nopiggieshere.com')">See Project</button>
+      </mat-card-footer>
+    </mat-card>
+
+    <mat-card class="dev-projects">
+      <mat-card-header>
+        <mat-card-title>Richardson Designs</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/richardson_designs.png"> 
+      <mat-card-content>
+          <p class="dev-project-description">
+            My very first portfolio website. This will eventually be transformed into my business page, but right now this was the project that helped getme a 4.0 gpa.
+          </p>
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-button (click)="navigateTo('http://www.richardsondesigns.ca')">See Project</button>
+      </mat-card-footer>
+    </mat-card>
+  </div>  
+  <h3>App Development</h3>
+  <div class="category" fxLayoutAlign="center">
+    <mat-card class="dev-projects">
+      <mat-card-header>
+        <mat-card-title>Trot with Tots</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/gps_app.png"> 
+      <mat-card-content>
+          <p class="dev-project-description">
+            An app for new mothers to help get them out of the house and take in the scenery with their new babies. They can like and share their favorite routes as well.
+          </p>
+      </mat-card-content>
+      <mat-card-footer>
+        <button disabled mat-button>Coming Soon</button>
+      </mat-card-footer>
+    </mat-card>
+    <mat-card class="dev-projects" color="warn">
+      <mat-card-header>
+        <mat-card-title>Firebase Image Gallery</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="assets/img/image_gallery.jpg"> 
+      <mat-card-content>
+          <p class="dev-project-description">
+            This started as a way to share images with my family privately all across the country, but I changed my mind and I think it would be nice to share with everyone.
+          </p>
+      </mat-card-content>
+      <mat-card-footer>
+        <button disabled mat-button>Coming Soon</button>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

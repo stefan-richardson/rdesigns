@@ -1,7 +1,23 @@
-<div class="panels">
+<div class="panels" [class.hidden]="sectionOpen()">
   <div *ngFor="let panel of panelIds; let i = index" [class.open]="panelIds[i].isOpen" [class.open-active]="panelIds[i].isActive" class="panel {{ panel.class }}" (click)="panelControl(i)">
     <p></p>
-    <p>{{ panel.title }}</p>
-    <p><button mat-button>{{ panel.message }}</button></p>
+    <p class="panel-title">{{ panel.title }}</p>
+    <p><button mat-button (click)="openSection(i)">{{ panel.message }}</button></p>
   </div>
 </div>
+<div class="nav-container">
+  <mat-toolbar color="accent">
+    <span (click)="openMenu()"><i class="material-icons menu-icon">menu</i></span><span class="nav-title">S. Richardson - {{navbarTitle}}</span>
+  </mat-toolbar>
+</div>
+<app-development class="open-sections" *ngIf="isDev"></app-development>
+<!-- <app-design class="open-sections" *ngIf="isDesign"></app-design> -->
+<!-- <app-games class="open-sections" *ngIf="isGames"></app-games> -->
+<!-- <app-about class="open-sections" *ngIf="isAbout"></app-about> -->
+<!-- <app-shop class="open-sections" *ngIf="isShop"></app-shop> -->
+<div class="nav-container footer-container">
+  <mat-toolbar color="accent" fxLayoutAlign="space-around">
+    <span><i class="material-icons menu-icon">mail</i></span><span class="nav-title">stefan.r.richardson@gmail.com</span>
+  </mat-toolbar>
+</div>
+
