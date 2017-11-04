@@ -13,11 +13,13 @@ import { AppComponent } from './app.component';
 // OTHER IMPORTS
 import 'hammerjs';
 import { DevelopmentComponent } from './development/development.component';
+import { DesignComponent } from './design/design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DevelopmentComponent
+    DevelopmentComponent,
+    DesignComponent
   ],
   imports: [
     BrowserModule,

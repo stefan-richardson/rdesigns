@@ -122,8 +122,13 @@
 }
 
 .footer-container {
+  align-self: flex-end;
   mat-toolbar {
     margin-top: 100px;
   }
+}
+
+.section-container {
+  min-height: 750px;
 }
 

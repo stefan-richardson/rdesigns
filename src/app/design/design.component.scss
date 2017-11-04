@@ -1,0 +1,70 @@
+.hero-container {
+  width: 100%;
+  min-width: 320px;
+  min-height: 350px;
+  background-color: #ddd;
+  display: block; 
+  background-image: url('/assets/img/design_hero2.jpg');
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  filter: grayscale(60%);
+
+  .hero-title {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+.container {
+  width: 75%;
+  min-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+
+  h3 {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-align: left;
+  }  
+  
+  .category {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .dev-projects {
+      flex-grow: 1;
+      margin-top: 5px;
+    }
+
+    .logo-designs {
+      width: 150px;
+      margin: 5px;
+    }
+
+    .baby-room {
+      width: 250px;
+      margin: 5px;
+    }
+
+    .movie-poster {
+      width: 200px;
+    }
+
+    .dc-wall-art {
+      width: 450px;
+      margin: 5px;
+    }
+
+    .marvel-user-images {
+      width: 125px;
+    }
+  }
+}
+
+.coming-soon {
+  font-size: .9em;
+  color: #aaa;
+}

@@ -25,8 +25,8 @@ export class AppComponent {
     {title: 'Shop', url: 'shop', message: 'Buy Stuff!', class: 'panel5', isActive: false, isOpen: false}
   ];
 
-  isDev = true;
-  isDesign = false;
+  isDev = false;
+  isDesign = true;
   isGames = false;
   isAbout = false;
   isShop = false;

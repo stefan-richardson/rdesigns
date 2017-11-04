@@ -7,11 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
 // Components
 import { AppComponent } from './app.component';
 import { DevelopmentComponent } from './development/development.component';
+import { DesignComponent } from './design/design.component';
 
 const appRoutes: Routes = [
   { path: '', component: AppComponent },
   { path: 'development', component: DevelopmentComponent },
-  // { path: 'design', component: DesignComponent },
+  { path: 'design', component: DesignComponent },
   // { path: 'games', component: GamesComponent },
   // { path: 'about', component: AboutComponent },
   // { path: 'shop', component: ShopComponent },

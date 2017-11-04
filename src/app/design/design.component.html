@@ -1,0 +1,99 @@
+<div class="hero-container" fxLayoutAlign="center center">
+  <h2 class="hero-title">Graphic Design</h2>
+</div>
+<div class="container">
+  <h3 (click)="expandGroup('logo')">
+    Logo Designs
+    <i class="material-icons" *ngIf="openLogo">arrow_drop_down</i>
+    <i class="material-icons" *ngIf="!openLogo">arrow_drop_up</i>
+  </h3>
+  <div class="category" fxLayoutAlign="stretch" *ngIf="openLogo">
+    <div *ngFor="let logo of logos; let i = index">
+      <mat-card class="dev-projects logo-designs">
+        <mat-card-header>
+          <mat-card-title>{{ logo.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{logo.filepath}}"> 
+      </mat-card>
+    </div>
+  </div>
+
+  <h3 (click)="expandGroup('snoopy')">
+    Snoopy Wall Art
+    <i class="material-icons" *ngIf="!openSnoopy">arrow_drop_up</i>
+    <i class="material-icons" *ngIf="openSnoopy">arrow_drop_down</i>
+  </h3>
+  <div class="category" fxLayoutAlign="stretch" *ngIf="openSnoopy">
+    <div *ngFor="let image of snoopy; let i = index">
+      <mat-card class="dev-projects baby-room">
+        <mat-card-header>
+          <mat-card-title>{{ image.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{image.filepath}}"> 
+      </mat-card>
+    </div>
+  </div>
+
+  <h3 (click)="expandGroup('poster')">
+    Movie Posters
+    <i class="material-icons" *ngIf="!openPosters">arrow_drop_up</i>
+    <i class="material-icons" *ngIf="openPosters">arrow_drop_down</i>
+  </h3>
+  <div class="category" fxLayoutAlign="stretch" *ngIf="openPosters">
+    <div *ngFor="let poster of moviePosters; let i = index">
+      <mat-card class="dev-projects movie-posters">
+        <mat-card-header>
+          <mat-card-title>{{ poster.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{poster.filepath}}"> 
+      </mat-card>
+    </div>
+  </div>
+
+  <h3 (click)="expandGroup('dc')">
+    DC Wall Art
+    <i class="material-icons" *ngIf="!openDCWallArt">arrow_drop_up</i>
+    <i class="material-icons" *ngIf="openDCWallArt">arrow_drop_down</i>
+  </h3>
+  <div class="category" fxLayoutAlign="stretch" *ngIf="openDCWallArt">
+    <div *ngFor="let dcImage of dcWallArt; let i = index">
+      <mat-card class="dev-projects dc-wall-art">
+        <mat-card-header>
+          <mat-card-title>{{ dcImage.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{dcImage.filepath}}"> 
+      </mat-card>
+    </div>
+  </div>
+
+  <h3 (click)="expandGroup('marvel')">
+    Marvel User Images
+    <i class="material-icons" *ngIf="!openMarvelUserImages">arrow_drop_up</i>
+    <i class="material-icons" *ngIf="openMarvelUserImages">arrow_drop_down</i>
+  </h3>
+  <div class="category" fxLayoutAlign="stretch" *ngIf="openMarvelUserImages">
+    <div *ngFor="let xmen of xmenImages; let i = index">
+      <mat-card class="dev-projects marvel-user-images">
+        <mat-card-header>
+          <mat-card-title>{{ xmen.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{xmen.filepath}}"> 
+      </mat-card>
+    </div>
+  </div>
+  <div class="category" fxLayoutAlign="stretch" *ngIf="openMarvelUserImages">
+    <div *ngFor="let avengers of avengersImages; let i = index">
+      <mat-card class="dev-projects marvel-user-images">
+        <mat-card-header>
+          <mat-card-title>{{ avengers.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{avengers.filepath}}"> 
+      </mat-card>
+    </div>
+  </div>
+
+  <h3>Business Cards<span class="coming-soon"> - Coming Soon</span></h3>
+  <h3>Menus<span class="coming-soon"> - Coming Soon</span></h3>
+  <h3>#100DaysOfDesign<span class="coming-soon"> - Coming Soon</span></h3>
+</div>
+
